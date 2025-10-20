@@ -1,0 +1,95 @@
+img{
+    border-radius: 2rem;
+}
+.headings{
+    text-align: center;
+}
+
+.load{
+    height:75vh;
+}
+
+#about-p{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+
+}
+.svg-images{
+    border-radius: 30%;
+    background-color: transparent;
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale:0.5;
+    }   
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+
+}
+
+.ani{
+    animation: appear ease-in-out 0.5s;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+.icons{
+    animation: slide ease-in-out 2s;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+
+#my_img:hover{
+    animation: glow 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slide{
+    from{
+        opacity: 0;
+        transform: translateX(50px)
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+@keyframes glow {
+    50%{box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.5);
+}
+}
+
+.exp-imgs{
+    object-fit: cover;
+}
+
+.slider{
+    position: relative;
+
+}
+
+.slider img{
+    display: none;
+}
+
+img.displaySlide{
+    display:block;
+    animation: fade 1s;
+}
+.exper-box{
+    justify-content: center;
+}
+
+@keyframes fade {
+    from{
+        opacity: 0.5;
+    }
+    to{
+        opacity: 1;
+    }
+}

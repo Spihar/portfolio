@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harthik</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container" > 
+        <header class="d-flex justify-content-center py-3"> 
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a href="#" class="nav-link active" aria-current="page">Home</a>
+            </li> 
+            <li class="nav-item">
+                <a href="#hanging-icons" class="nav-link">skills</a>
+            </li>  
+            <li class="nav-item">
+                <a href="#about" class="nav-link">About</a>
+            </li> 
+             <li class="nav-item">
+                <a href="https://www.linkedin.com/in/harthik-reddy-nuvvuru-0167b1287" class="nav-link">linkedin</a>
+            </li> 
+        </ul> 
+        </header> 
+    </div>
+    
+    <div class="container col-xxl-8 px-4 py-5 ani load"> 
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5"> 
+            <div class="col-10 col-sm-8 col-lg-6" > 
+                <img id="my_img" src="{{url_for('static',filename='homeimg.jpg')}}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"> 
+            </div> 
+            <div class="col-lg-6"> 
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Hi!, I'm Harthik - a full-stack web dev and Data Science student</h1> 
+                <p class="lead">Tech Enthusiast × Part-Time Photographer</p>
+                <p class="lead">
+    <a href="https://leetcode.com/u/spihar/" target="_blank" class="text-decoration-none">
+        <strong>170+</strong> problems solved on LeetCode
+    </a>
+</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start"> 
+                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" onclick="gotoresume()">Download resume</button> 
+                    <button type="button" class="btn btn-outline-secondary btn-lg px-4" onclick="gotogit()">View projects</button> 
+                    
+                </div> 
+            </div> 
+        </div> 
+    </div>
+
+
+    <div id="about" class="container col-xxl-8 px-4 py-5 ani">
+        <h1 class="headings">About</h1>
+        <p id="about-p">
+Hey, I’m Harthik, a Computer Science student at Sathyabama University, Chennai, specializing in Data Science. I’m passionate about building cool things with code, learning new technologies, and solving real-world problems.        </p>
+        <br>
+        <p id="about-p">
+I love working on web development and data projects, always looking for ways to level up my skills. Outside tech, I enjoy photography, exploring new places, and watching movies.        </p>
+            <br>
+            <p id="about-p">
+I run a photography page on Instagram where I share my favorite shots. I’m also an active LeetCode user, having solved 170+ problems to keep my problem-solving sharp.</p>
+    </div>
+
+
+  <div class="container px-4 py-5 ani" id="hanging-icons"> 
+    <h1 class="headings">Skills</h1>
+    <h2 class="pb-2 border-bottom">Frontend</h2> 
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3"> 
+        <div class="col d-flex align-items-start icons"> 
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"> 
+                <img class="svg-imgs" src="{{url_for('static',filename='svg/html.svg')}}" alt="HTML" width="50" height="50"> 
+            </div> 
+            <div> 
+                <h3 class="fs-2 text-body-emphasis">HTML</h3> 
+                <p>Proficient in writing clean, semantic HTML5 to build accessible and well-organized web pages. I focus on creating a solid structural foundation for every project.</p> 
+            </div> 
+        </div>
+        <div class="col d-flex align-items-start icons"> 
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"> 
+                <img class="svg-imgs" src="{{url_for('static',filename='svg/css.svg')}}" alt="CSS" width="50" height="50"> 
+            </div> 
+            <div> 
+                <h3 class="fs-2 text-body-emphasis">CSS</h3> 
+                <p>Experienced in using modern CSS3, including Flexbox and Grid, to design visually appealing and fully responsive user interfaces that work seamlessly across all devices.</p>  
+            </div> 
+        </div> 
+        <div class="col d-flex align-items-start icons"> 
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"> 
+                <img class="svg-imgs" src="{{url_for('static',filename='svg/js.svg')}}" alt="JavaScript" width="50" height="50">
+            </div> 
+            <div>
+            <h3 class="fs-2 text-body-emphasis">Java Script</h3> 
+            <p>Skilled in modern JavaScript (ES6+) for creating dynamic and interactive user experiences. I have experience with DOM manipulation, fetching data from APIs, and managing client-side logic.</p>  
+            </div>
+        </div>
+        <div class="col d-flex align-items-start icons"> 
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"> 
+                <img class="svg-imgs" src="{{url_for('static',filename='svg/js.svg')}}" alt="JavaScript" width="50" height="50">
+            </div> 
+            <div>
+            <h3 class="fs-2 text-body-emphasis">React</h3> 
+            <p>During my internship, I used React to build and maintain the front-end of a production application. I am experienced in creating reusable components, managing state with hooks, and developing single-page applications.</p>  
+            </div>
+        </div>      
+    </div>
+</div>
+<div class="container px-4 py-5 ani" id="hanging-icons">
+<h2 class="pb-2 border-bottom">backend</h2> 
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3"> 
+        <div class="col d-flex align-items-start icons"> 
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"> 
+                <img class="svg-imgs" src="{{url_for('static',filename='svg/flask.svg')}}" alt="HTML" width="50" height="50"> 
+            </div> 
+            <div>
+                <h3 class="fs-2 text-body-emphasis">flask</h3> 
+                <p>Python is my primary language for implementing Data Structures & Algorithms and solving complex problems on platforms like LeetCode. I also use it extensively for backend development and scripting.</p> 
+            </div> 
+        </div>
+        <div class="col d-flex align-items-start icons"> 
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"> 
+                <img class="svg-imgs" src="{{url_for('static',filename='svg/fast.svg')}}" alt="CSS" width="50" height="50"> 
+            </div> 
+            <div> 
+                <h3 class="fs-2 text-body-emphasis">FastAPI</h3> 
+                <p>Proficient in building high-performance, asynchronous APIs with FastAPI. I leverage its modern features, including automatic documentation, to create robust and fast backend systems.</p>  
+            </div> 
+        </div>
+        <div class="col d-flex align-items-start icons"> 
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"> 
+                <img class="svg-imgs" src="{{url_for('static',filename='svg/python.svg')}}" alt="JavaScript" width="50" height="50">
+            </div> 
+            <div>
+            <h3 class="fs-2 text-body-emphasis">python</h3> 
+            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>  
+            </div>
+        </div>
+        <div class="col d-flex align-items-start icons"> 
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"> 
+                <img class="svg-imgs" src="{{url_for('static',filename='svg/java-svgrepo-com.svg')}}" alt="JavaScript" width="50" height="50">
+            </div> 
+            <div>
+            <h3 class="fs-2 text-body-emphasis">Java</h3> 
+            <p>I have a solid foundation in Java for building object-oriented applications. My experience includes applying core Java principles to develop robust and efficient software solutions.</p>  
+            </div>
+        </div>
+        <div class="col d-flex align-items-start icons"> 
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"> 
+                <img class="svg-imgs" src="{{url_for('static',filename='svg/mysql-svgrepo-com.svg')}}" alt="JavaScript" width="50" height="50">
+            </div> 
+            <div>
+            <h3 class="fs-2 text-body-emphasis">SQL</h3> 
+            <p>Skilled in writing efficient SQL queries and designing relational database schemas using MySQL. I have hands-on experience with data modeling and ensuring data integrity for applications.</p>  
+            </div>
+        </div> 
+        <div class="col d-flex align-items-start icons"> 
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"> 
+                <img class="svg-imgs" src="{{url_for('static',filename='svg/mongodb.png')}}" alt="MongoDB" width="50" height="50">
+            </div> 
+            <div>
+            <h3 class="fs-2 text-body-emphasis">MongoDB</h3> 
+            <p>Gained practical experience with MongoDB during my internship, where I used its NoSQL database to manage application data. I am comfortable with document-based data modeling in a flexible, scalable environment.</p>  
+            </div>
+        </div>
+    </div>
+     
+        
+</div>
+<div class="container px-4 py-5 ani" id="hanging-icons">
+<h2 class="pb-2 border-bottom">Tools & Methodologies</h2> 
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3"> 
+        <div class="col d-flex align-items-start icons"> 
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"> 
+                <img class="svg-imgs" src="{{url_for('static',filename='svg/lc.png')}}" alt="leetocde" width="50" height="50"> 
+            </div> 
+            <div>
+                <h3 class="fs-2 text-body-emphasis">Problem Solving</h3> 
+                <p>Proficient in Data Structures and Algorithms with <strong>170+ problems</strong> solved on LeetCode, demonstrating strong analytical skills.</p>
+                <a href="https://leetcode.com/u/spihar/" target="_blank">View LeetCode Profile</a>
+            </div> 
+        </div>
+        <div class="col d-flex align-items-start icons"> 
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"> 
+                <img class="svg-imgs" src="{{url_for('static',filename='svg/github.jpeg')}}" alt="git" width="50" height="50"> 
+            </div> 
+            <div> 
+                <h3 class="fs-2 text-body-emphasis">Git & GitHub</h3> 
+                <p>Experienced in version control with Git, including branching, merging, and pull requests. I use GitHub to manage all of my academic and personal projects.</p>  
+            </div> 
+        </div>
+        <div class="col d-flex align-items-start icons"> 
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"> 
+                <img class="svg-imgs" src="{{url_for('static',filename='svg/linux_final.jpeg')}}" alt="bash" width="50" height="50">
+            </div> 
+            <div>
+            <h3 class="fs-2 text-body-emphasis">Linux & Bash</h3> 
+            <p>Comfortable working in a Linux environment and writing Bash scripts to automate tasks and manage workflows.</p>  
+            </div>
+        </div>
+    </div>
+     
+        
+</div>
+
+
+<div class="album py-5 bg-body-tertiary ani"> 
+    <div class="container">
+        <h1 class="fw-light headings">Experience</h1> 
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 exper-box"> 
+            <div class="col">
+            <div class="card shadow-sm">
+              <img src="{{url_for('static',filename='internship.gif')}}" class="bd-placeholder-img card-img-top" height="225" width="100%" alt="Internship company logo">
+              
+              <div class="card-body">
+                <h5 class="card-title">Software Development Intern</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Tech Solutions Inc. | June 2025 - jul 2025</h6>
+                <p class="card-text">
+                    <ul>
+                        <li>Developed a Chrome Extension that enhances user prompts using LLaMA 3.3 70B via Groq API</li>
+                        <li>Designed and tested system prompts to improve LLM output quality and relevance.</li>
+                        <li>Built and maintained the backend in Node.js and the frontend React using Vite, including prompt history, context retention and logging features</li>                    </ul>
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="https://fixpromai.com" target="_blank" class="btn btn-sm btn-outline-secondary">view project</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="col"> 
+                <div class="card shadow-sm"> 
+                    <div class="slider">
+                        <div class="slides" id="card1">
+                        <img src="{{url_for('static',filename='bits1.png')}}" class="bd-placeholder-img card-img-top exp-imgs" height="225" width="100%" alt="exp_bits1">
+                        <img src="{{url_for('static',filename='bits2.png')}}" class="bd-placeholder-img card-img-top exp-imgs" height="225" width="100%" alt="exp_bits2">
+                        <img src="{{url_for('static',filename='bits3.png')}}" class="bd-placeholder-img card-img-top exp-imgs" height="225" width="100%" alt="exp_bits3">
+                        </div>
+                    </div>
+                    
+                    <div class="card-body"> 
+                        <p class="card-text">
+                        <h5 class="card-title">Inter college Hackathon</h5>
+                <h6 class="card-subtitle mb-2 text-muted">BITS pilani Hyd</h6>
+                        <ul>
+                            <li>Developed a smart web app for event ticketing, digital check-ins, and live entry data tracking.</li>
+                            <li>This application uses <strong>machine learning</strong> to send relevant event suggestions to students.</li>
+                            <li>Utilized <strong>MySQL</strong> to store data for students and organizers.</li>
+                        </ul>    
+                        </p> 
+                        <div class="d-flex justify-content-between align-items-center"> 
+                            <div class="btn-group"> 
+    <a href="YOUR_GITHUB_PROJECT_LINK" target="_blank" class="btn btn-sm btn-outline-secondary">View on GitHub</a>
+</div>
+                             
+                        </div> 
+                    </div> 
+                </div> 
+            </div>
+            <div class="col"> 
+                <div class="card shadow-sm"> 
+                    <div class="slider">
+                        <div class="slides" id="card2">
+                        <img src="{{url_for('static',filename='sist1.png')}}" class="bd-placeholder-img card-img-top exp-imgs" height="225" width="100%" alt="exp_bits1">
+                        <img src="{{url_for('static',filename='sist2.png')}}" class="bd-placeholder-img card-img-top exp-imgs" height="225" width="100%" alt="exp_bits2">
+                        </div>
+                    </div>
+                    
+                    <div class="card-body"> 
+                        <h5 class="card-title">College Hackathon</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Sathyabama University</h6> 
+                        <p>
+                            <strong>Space Weather Prediction:</strong>
+        <br>
+        A predictive system that uses real-time satellite data from NASA's open API to forecast solar flares and geomagnetic storms.
+        <br><br>
+        <strong>Spotify Playlist Generator:</strong>
+        <br>
+        Utilized Beautiful Soup for web scraping the top 100 songs on Billboard and used the Spotify API to create a daily playlist.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center"> 
+                            <div class="btn-group"> 
+                                <a href="YOUR_SPACE_WEATHER_GITHUB_LINK" target="_blank" class="btn btn-sm btn-outline-secondary">NASA Project</a>
+          <a href="YOUR_SPOTIFY_GITHUB_LINK" target="_blank" class="btn btn-sm btn-outline-secondary">Spotify Project</a>
+                            </div> 
+                             
+                        </div> 
+                    </div> 
+                </div> 
+            </div>  
+        </div> 
+    </div>
+  </div>
+
+
+
+
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"> 
+    <div class="col-md-4 d-flex align-items-center"> 
+        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap"> 
+            <svg class="bi" width="30" height="24" aria-hidden="true">
+                <use xlink:href="#bootstrap"></use>
+            </svg> 
+        </a> 
+        <span class="mb-3 mb-md-0 text-body-secondary">© 2025</span> 
+    </div> 
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex"> 
+        <li class="ms-3">
+            <a class="text-body-secondary" href="#" aria-label="Instagram">
+                <svg class="bi" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#instagram"></use>
+                </svg>
+            </a>
+        </li> 
+        <li class="ms-3">
+            <a class="text-body-secondary" href="#" aria-label="Facebook">
+                <svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use>
+                </svg>
+            </a>
+        </li> 
+    </ul> 
+</footer>
+
+
+
+
+<script src="{{url_for('static',filename='index.js')}}">
+    
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</body>
+</html>
